@@ -13,7 +13,8 @@ import javax.swing.JOptionPane;
 public class DeliciasDelMar {
 
     public static void main(String[] args) {
-      String botonesMenu[]={"Restaurante", "Ordenes", "Menú", "Reportes", "Salir"};
+        
+        String botonesMenu[]={"Restaurante", "Ordenes", "Menú", "Reportes", "Salir"};
       int botonint = JOptionPane.showOptionDialog(
                 null,
                 "¿Dondé desea ingresar?",
