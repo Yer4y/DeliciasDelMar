@@ -9,7 +9,7 @@ package com.mycompany.deliciasdelmar;
  * @author brand
  */
 public class Mesas {
-    
+
     int numMesa;
     int Cantsillas;
     boolean Estado;
@@ -63,14 +63,5 @@ public class Mesas {
     public void setMesero(DatosMesero mesero) {
         this.mesero = mesero;
     }
-    
-    
-    
 
-
-
-        
-    
-    
-    
 }

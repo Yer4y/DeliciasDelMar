@@ -1,7 +1,6 @@
- /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.deliciasdelmar;
 
 import javax.swing.JOptionPane;
@@ -13,9 +12,9 @@ import javax.swing.JOptionPane;
 public class DeliciasDelMar {
 
     public static void main(String[] args) {
-        
-        String botonesMenu[]={"Restaurante", "Ordenes", "Menú", "Reportes", "Salir"};
-      int botonint = JOptionPane.showOptionDialog(
+
+        String botonesMenu[] = {"Restaurante", "Ordenes", "Menú", "Reportes", "Salir"};
+        int botonint = JOptionPane.showOptionDialog(
                 null,
                 "¿Dondé desea ingresar?",
                 "Seleccione una opción",
@@ -30,15 +29,17 @@ public class DeliciasDelMar {
             case 0:
                 llenarMesas(mesa);
                 ImprimirMesas(mesa);
-            break;
-            
+                break;
+
             default:
                 break;
         }
     }
+
     public static int aleatorio(int min, int max) {
         return (int) (Math.random() * (max - min) + min);
     }
+
     public static void llenarMesas(Mesas mesa[]) {
         for (int i = 0; i < mesa.length; i++) {
             int numMesa = 0 + 1;
@@ -47,13 +48,14 @@ public class DeliciasDelMar {
             int vistmar = aleatorio(0, 1);
             DatosMesero mesero = mesa[i].mesero;
 
-            mesa[i] = new Mesas(numMesa, 
-                    Cantsillas, 
-                    Estado, 
-                    vistmar, 
+            mesa[i] = new Mesas(numMesa,
+                    Cantsillas,
+                    Estado,
+                    vistmar,
                     mesero);
         }
     }
+
     public static void ImprimirMesas(Mesas mesa[]) {
         for (int i = 0; i < mesa.length; i++) {
             System.out.println("Numero mesa: " + mesa[i].getNumMesa());
@@ -68,5 +70,5 @@ public class DeliciasDelMar {
 
         }
     }
-    
+
 }
