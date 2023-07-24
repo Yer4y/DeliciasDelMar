@@ -45,7 +45,7 @@ public class Orden {
         if (validarNumeroMesa(numMesa)) {
             if (mesasOcupadas[numMesa - 1] == 1) {
                 System.out.println("El numero de la mesa " + numMesa + " esta ocupada.");
-                OpcionesCancelarAgregar();
+                BotonesAgregarCancelar();
             } else {
                 System.out.println("Se ha asignado la mesa " + numMesa + " al client@.");
                 mesasOcupadas[numMesa - 1] = 1;
@@ -53,7 +53,7 @@ public class Orden {
             }
         } else {
             System.out.println("El numero de la mesa " + numMesa + " no es valido.");
-            OpcionesCancelarAgregar();
+            BotonesAgregarCancelar();
         }
 
     }
@@ -63,21 +63,30 @@ public class Orden {
         return numMesa >= 1 && numMesa <= 12;
 
     }
+        public static void BotonesAgregarCancelar() {
+        String botones[] = {"Agregar otro numero", "Cancelar"};
 
-    public static void OpcionesCancelarAgregar() {
-        System.out.println("Opciones:");
-        System.out.println("[1] Agregar otro número");
-        System.out.println("[2] Cancelar");
-
+        int botonInt = JOptionPane.showOptionDialog(null,
+                "Elige una opcion",
+                "El numero de mesa no es valido",
+                0,
+                JOptionPane.WARNING_MESSAGE,
+                null,
+                botones,
+                botones);
         int opcion = 1;
 
         if (opcion == 1) {
-            numeroMesa(0); 
+            numeroMesa(0);
         } else if (opcion == 2) {
-            System.out.println("Se cancela el abrir la orden.");
+            
 
         }
+
     }
+    
+
+
 
     public int getIdOrden() {
         return idOrden;
