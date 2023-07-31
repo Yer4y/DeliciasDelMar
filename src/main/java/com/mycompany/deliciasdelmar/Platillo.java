@@ -25,9 +25,7 @@ class Platillo {
     }
 
     Platillo(int numero, String nombre, String descripcion, double precio, com.mycompany.deliciasdelmar.TipoPlatillo tipo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+        throw new UnsupportedOperationException("Not supported yet."); 
     public int getNumero() {
         return numero;
     }
@@ -82,7 +80,7 @@ class Platillo {
    
 
     void setTipo(com.mycompany.deliciasdelmar.TipoPlatillo nuevoTipo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     private static class TipoPlatillo {
